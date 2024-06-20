@@ -18,3 +18,18 @@ body{
     overflow-x: hidden;
     background: #030303;
 }
+
+/* In your CSS file or tailwind.config.css */
+@keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
+  
+  .animate-scrolling {
+    animation: scroll-left 20s linear infinite;
+  }
+  

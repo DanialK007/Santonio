@@ -3,7 +3,7 @@
     /* rotate: 100deg; */
     transform: perspective(100px);
     /* transform: rotateX('200deg'); */
-    transition: 500ms ease-out;
+    transition: 400ms ease-out;
 }
 
 .Zoomer.visible {
@@ -15,8 +15,8 @@
 
 
 .Zoomer2 {
-    scale: 0.6;
-    transition: 1200ms ease-out;
+    scale: 0.5;
+    transition: 2000ms ease-out;
 }
 
 .Zoomer2.visible {

@@ -9,6 +9,7 @@ function Home() {
       <Header />
       <Hero />
       <Discover />
+      <div className='h-screen'></div>
     </>
   )
 }

@@ -2,7 +2,7 @@ import { Parallax, Background } from 'react-parallax';
 import Zoomer from './Zoomer';
 
 
-const MyParallax = ({children, image, className, className2}) => (
+const MyParallax = ({children, image, className}) => (
     <Parallax strength={300} className="">
         <Background className={children.className}>
             {children}
