@@ -1,5 +1,5 @@
 import useIntersectionObserver from './useIntersectionObserver.js';
-import observer from './Zoomer.module.css';
+import observer from './Observer.module.css';
 
 const Zoomer = ({ children, className }) => {
     const [ref, isVisible] = useIntersectionObserver({ threshold: 0.5 });

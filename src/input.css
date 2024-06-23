@@ -33,3 +33,18 @@ body{
     animation: scroll-left 20s linear infinite;
   }
   
+
+.downer{
+  animation: downer 1.2s;
+}
+
+@keyframes downer {
+  0%,50% {
+    transform: translateY(-80px);
+    /* transform: scaleX(0); */
+  }
+  100% {
+    transform: translateY(0);
+    /* transform: scaleX(1); */
+  }
+}

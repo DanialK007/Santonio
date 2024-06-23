@@ -764,11 +764,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .py-\[0\.3rem\] {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
@@ -782,6 +777,10 @@ video {
 .py-\[60px\] {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .pe-\[120px\] {
@@ -802,14 +801,6 @@ video {
 
 .pt-3 {
   padding-top: 0.75rem;
-}
-
-.pb-20 {
-  padding-bottom: 5rem;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
 }
 
 .text-center {
@@ -890,6 +881,22 @@ body{
   animation: scroll-left 20s linear infinite;
 }
 
+.downer{
+  animation: downer 1.2s;
+}
+
+@keyframes downer {
+  0%,50% {
+    transform: translateY(-80px);
+    /* transform: scaleX(0); */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* transform: scaleX(1); */
+  }
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -909,4 +916,3 @@ body{
     width: 600px;
   }
 }
-  

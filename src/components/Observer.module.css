@@ -22,3 +22,29 @@
 .Zoomer2.visible {
     scale: 1;
 }
+
+.Upper {
+    transform: translateY(50px);
+    scale: 0.5;
+    transition: 700ms ease-out;
+}
+
+.Upper.visible {
+    transform: translateY(0);
+    scale: 1;
+}
+
+.Fader {
+    opacity: 0;
+    transition: 500ms ease-in-out;
+}
+
+.Fader.visible {
+    opacity: 1;
+    animation: fader 1000ms ease-in-out;
+}
+
+@keyframes fader {
+    0%, 50%{ opacity: 0;}
+    100%{ opacity: 1;}
+}
