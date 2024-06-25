@@ -104,20 +104,20 @@ const companyNames = [
 function Discover() {
   return (
     <>
-        <div className='relative h-[800px] flex items-center justify-center'>
+        <div className='fader relative md:h-[600px] lg:h-[800px] flex items-center justify-center'>
             <Zoomer>
-                <img src={dashboard} alt="" className='lg:h-[650px] rounded-2xl'/>
+                <img src={dashboard} alt="" className='md:w-[80vw] lg:w-[75vw] xl:w-[70vw] rounded-2xl'/>
             </Zoomer>
             <Zoomer2 className="absolute top-0 left-0 w-full h-full py-[60px] z-10 flex items-center justify-between flex-col">
-                <div className='w-[1400px] flex justify-between ps-[140px] pe-[120px]'>
+                <div className='md:w-[80vw] lg:w-[85vw] xl:w-[90vw] flex justify-between ps-[140px] pe-[120px]'>
                         <img src={block1} alt=""  className='h-[100px]'/>
                         <img src={block4} alt=""  className='h-[100px]'/>
                 </div>
-                <div className='w-[1400px] flex justify-between '>
+                <div className='md:w-[80vw] lg:w-[85vw] xl:w-[90vw] flex justify-between '>
                         <img src={block2} alt=""  className='h-[100px]'/>
                         <img src={block5} alt=""  className='h-[100px]'/>
                 </div>
-                <div className='w-[1400px] flex justify-between px-[100px]'>
+                <div className='md:w-[80vw] lg:w-[85vw] xl:w-[90vw] flex justify-between px-[100px]'>
                         <img src={block3} alt=""  className='h-[100px]'/>
                         <img src={block6} alt=""  className='h-[100px]'/>
                 </div>
@@ -126,11 +126,13 @@ function Discover() {
         <div className='text-white text-center'>
             <div className='pb-12 text-lg'>Trusted by</div>
             <div className="flex justify-between overflow-hidden whitespace-nowrap">
+            <div className="grid-cols-subgrid animate-scrolling">
                 {companyNames.map((company, index) => (
-                    <div key={index} className="inline-block px-4 py-2 animate-scrolling">
+                    <div key={index} className="inline-block px-10 py-2">
                     {company}
                     </div>
                 ))}
+            </div>
             </div>
         </div>
     </>

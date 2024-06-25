@@ -21,18 +21,18 @@ body{
 
 /* In your CSS file or tailwind.config.css */
 @keyframes scroll-left {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-200%);
-    }
+  0% {
+    transform: translateX(10%);
   }
-  
-  .animate-scrolling {
-    animation: scroll-left 20s linear infinite;
+  100% {
+    transform: translateX(-20%);
   }
-  
+}
+
+.animate-scrolling {
+  animation: scroll-left 10s linear infinite;
+}
+
 
 .downer{
   animation: downer 1.2s;
@@ -46,5 +46,18 @@ body{
   100% {
     transform: translateY(0);
     /* transform: scaleX(1); */
+  }
+}
+
+.fader{
+  animation: fader 1.2s;
+}
+
+@keyframes fader {
+  0%,50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
