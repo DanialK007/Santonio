@@ -104,22 +104,22 @@ const companyNames = [
 function Discover() {
   return (
     <>
-        <div className='fader relative md:h-[600px] lg:h-[800px] flex items-center justify-center'>
+        <div className='fader py-20 relative md:h-[600px] lg:h-[800px] flex items-center justify-center'>
             <Zoomer>
-                <img src={dashboard} alt="" className='md:w-[80vw] lg:w-[75vw] xl:w-[70vw] rounded-2xl'/>
+                <img src={dashboard} alt="" className='z-20 md:z-0 w-[85vw] md:w-[80vw] lg:w-[75vw] xl:w-[70vw] rounded-2xl'/>
             </Zoomer>
             <Zoomer2 className="absolute top-0 left-0 w-full h-full py-[60px] z-10 flex items-center justify-between flex-col">
-                <div className='md:w-[80vw] lg:w-[85vw] xl:w-[90vw] flex justify-between ps-[140px] pe-[120px]'>
-                        <img src={block1} alt=""  className='h-[100px]'/>
-                        <img src={block4} alt=""  className='h-[100px]'/>
+                <div className='w-[75vw] md:w-[80vw] lg:w-[85vw] xl:w-[90vw] flex justify-between px-10 md:ps-[140px] md:pe-[120px]'>
+                        <img src={block1} alt=""  className='h-[40px] md:h-[100px]'/>
+                        <img src={block4} alt=""  className='h-[40px] md:h-[100px]'/>
                 </div>
-                <div className='md:w-[80vw] lg:w-[85vw] xl:w-[90vw] flex justify-between '>
-                        <img src={block2} alt=""  className='h-[100px]'/>
-                        <img src={block5} alt=""  className='h-[100px]'/>
+                <div className='w-[75vw] md:w-[80vw] lg:w-[85vw] xl:w-[90vw] flex justify-between '>
+                        <img src={block2} alt=""  className='h-[40px] md:h-[100px]'/>
+                        <img src={block5} alt=""  className='h-[40px] md:h-[100px]'/>
                 </div>
-                <div className='md:w-[80vw] lg:w-[85vw] xl:w-[90vw] flex justify-between px-[100px]'>
-                        <img src={block3} alt=""  className='h-[100px]'/>
-                        <img src={block6} alt=""  className='h-[100px]'/>
+                <div className='w-[75vw] md:w-[80vw] lg:w-[85vw] xl:w-[90vw] flex justify-between px-12 md:px-[100px]'>
+                        <img src={block3} alt=""  className='h-[40px] md:h-[100px]'/>
+                        <img src={block6} alt=""  className='h-[40px] md:h-[100px]'/>
                 </div>
             </Zoomer2>
         </div>
