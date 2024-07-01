@@ -35,11 +35,11 @@ body{
 
 
 .downer{
-  animation: downer 1.2s;
+  animation: downer 2s;
 }
 
 @keyframes downer {
-  0%,50% {
+  0%,70% {
     transform: translateY(-80px);
     /* transform: scaleX(0); */
   }
@@ -50,14 +50,27 @@ body{
 }
 
 .fader{
-  animation: fader 1.2s;
+  animation: fader 2s;
 }
 
 @keyframes fader {
-  0%,50% {
+  0%,70% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+.popUp{
+  animation: popUp 1.6s;
+}
+
+@keyframes popUp {
+  0%,50% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

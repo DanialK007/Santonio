@@ -1,23 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react';
+import img from "../images/menubar.svg";
 
 function Header() {
+    const [menuVisible, setMenuVisible] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuVisible(!menuVisible);
+    };
+
     return (
         <div className='downer fixed z-[999] top-0 left-0 w-full pt-3 flex items-center justify-center'>
-            <div className='min-w-56 justify-between flex text-[0.9rem] gap-5 font-semibold border bg-black text-white/60 border-white/20 rounded-s-full rounded-e-full px-[0.6rem] py-[0.4rem] items-center md:justify-center'>
-                <div className='flex gap-2 items-center justify-center'>
-                    <div className='w-6 h-6 flex items-center justify-center rounded-md bg-purple-600'>S</div>
-                    Santonio
+            <div className='min-w-56 text-[0.9rem] h-fit grid font-semibold border bg-black text-white/60 border-white/20 rounded-s-[22px] rounded-e-[22px] px-[0.6rem] py-[0.4rem] items-center md:justify-center'>
+                <div className="justify-between flex gap-5 ">    
+                    <div className='flex gap-2 items-center justify-center'>
+                        <div className='w-6 h-6 flex items-center justify-center rounded-md bg-purple-600'>S</div>
+                        Santonio
+                    </div>
+                    <a href="" className='hidden md:block bg-white/10 text-white py-[0.3rem] px-[0.7rem] rounded-s-full rounded-e-full'>Home</a>
+                    <a href="" className='hidden md:block hover:bg-white/10 py-[0.3rem] px-[0.7rem] rounded-s-full rounded-e-full'>Features</a>
+                    <a href="" className='hidden md:block hover:bg-white/10 py-[0.3rem] px-[0.7rem] rounded-s-full rounded-e-full'>About</a>
+                    <a href="" className='hidden md:block hover:bg-white/10 py-[0.3rem] px-[0.7rem] rounded-s-full rounded-e-full'>Blog</a>
+                    <a href="" className='hidden md:block hover:bg-white/10 py-[0.3rem] px-[0.7rem] rounded-s-full rounded-e-full'>Shop</a>
+                    <button className='hidden md:block bg-white py-[0.3rem] text-black px-[0.7rem] rounded-s-full rounded-e-full'>Sign up</button>
+                    <button id='menuBtn' className='block md:hidden bg-white/20 p-1 rounded-xl' onClick={toggleMenu}>
+                        <img src={img} alt="" />
+                    </button>
                 </div>
-                <a href="" className='hidden md:block bg-white/10 text-white py-[0.3rem] px-[0.7rem] rounded-s-full rounded-e-full'>Home</a>
-                <a href="" className='hidden md:block hover:bg-white/10 py-[0.3rem] px-[0.7rem] rounded-s-full rounded-e-full'>Features</a>
-                <a href="" className='hidden md:block hover:bg-white/10 py-[0.3rem] px-[0.7rem] rounded-s-full rounded-e-full'>About</a>
-                <a href="" className='hidden md:block hover:bg-white/10 py-[0.3rem] px-[0.7rem] rounded-s-full rounded-e-full'>Blog</a>
-                <a href="" className='hidden md:block hover:bg-white/10 py-[0.3rem] px-[0.7rem] rounded-s-full rounded-e-full'>Shop</a>
-                <button className='hidden md:block bg-white py-[0.3rem] text-black px-[0.7rem] rounded-s-full rounded-e-full'>Sign up</button>
-                <button className='block md:hidden bg-white/20 py-1 px-2 rounded-xl rotate-90'>|||</button>
+                <div id='menu' className={menuVisible ? "flex flex-col gap-2 pt-2 h-fit duration-500" : "duration-500 h-0 opacity-0 flex flex-col overflow-hidden"}>
+                    <a href="" className='text-center mx-auto px-4 md:hidden bg-white/10 text-white py-[0.3rem] rounded-s-full rounded-e-full'>Home</a>
+                    <a href="" className='text-center mx-auto px-4 md:hidden hover:bg-white/10 py-[0.3rem] rounded-s-full rounded-e-full'>Features</a>
+                    <a href="" className='text-center mx-auto px-4 md:hidden hover:bg-white/10 py-[0.3rem] rounded-s-full rounded-e-full'>About</a>
+                    <a href="" className='text-center mx-auto px-4 md:hidden hover:bg-white/10 py-[0.3rem] rounded-s-full rounded-e-full'>Blog</a>
+                    <a href="" className='text-center mx-auto px-4 md:hidden hover:bg-white/10 py-[0.3rem] rounded-s-full rounded-e-full'>Shop</a>
+                </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Header
+export default Header;
