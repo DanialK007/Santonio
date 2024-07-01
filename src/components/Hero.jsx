@@ -5,7 +5,7 @@ import Fader from './Fader';
 function Hero() {
   return (
     <div className='md:h-[700px] w-screen flex items-center justify-center text-center'>
-        <div className='pt-28 lg:pt-20'>
+        <div className='pt-28 lg:pt-28'>
             <div className='text-white popUp text-[2.5rem] lg:text-[5.4rem] font-[500] px-10 leading-[3rem] lg:max-w-[62rem] lg:leading-[5.3rem]'>
                 Empower Your Finicial &nbsp;
                 <span className='text-transparent -ms-3 bg-clip-text bg-gradient-to-r from-white to-purple-700'>
