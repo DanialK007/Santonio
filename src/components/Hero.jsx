@@ -1,6 +1,4 @@
 import React from 'react'
-import Upper from './Upper';
-import Fader from './Fader';
 
 function Hero() {
   return (

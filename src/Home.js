@@ -1,11 +1,13 @@
-import React from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Discover from './components/Discover'
-import logo from "./images/santonioLogo.svg"
-import Fader2 from './components/Fader2'
+import React, { useRef } from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Discover from './components/Discover';
+import Coin from './components/Coin';
+import CarouselSize from './components/CarouselSize';
 
 function Home() {
+  const carouselRef = useRef(null);
+
   return (
     <>
       <div className='bg-black overflow-hidden'>
@@ -13,30 +15,40 @@ function Home() {
         <Hero />
         <Discover />
       </div>
-      <div className='fixed top-0 left-0 w-full h-full -z-10 flex items-center justify-center'>
-        <div className='text-white text-3xl lg:text-7xl lg:max-w-5xl font-semibold lg:leading-[8rem] text-center'>Santonio Coin: The Currency of Tomorrow</div>
-      </div>
-      <div className='h-[800px] lg:h-screen bg-gradient-to-b from-black to-black/0'></div>
-      <div className='lg:p-20 flex items-center justify-center'>
-        <div className='relative w-[180px] h-[180px] md:w-[200px] md:h-[200px] lg:w-[400px] lg:h-[400px]'>
-          <img src={logo} alt="Santonio Coin Logo" className='absolute top-0 left-0 h-full w-full rounded-full z-30 bg-purple-600 flex items-center justify-center font-semibold text-white px-7 md:px-12 shadow-inner shadow-gray-50 lg:px-16 scale-[0.85] lg:scale-90' />
-          <div className='absolute overflow-hidden top-0 left-0 h-full w-full rounded-full z-20 bg-purple-800 flex items-center justify-center font-semibold text-white'>
-            <div className='w-full h-full relative animate-spin'>
-              <div className='absolute top-1/2 h-1 w-full bg-black'></div>
-              <div className='absolute top-1/2 h-1 w-full bg-black rotate-90'></div>
-              <div className='absolute top-1/2 h-1 w-full bg-black rotate-45'></div>
-              <div className='absolute top-1/2 h-1 w-full bg-black -rotate-45'></div>
-            </div>
+      <Coin />
+
+      <div className='py-40 bg-black text-white'>
+        <div className='grid max-w-screen-xl mx-auto lg:grid-cols-2 lg:gap-20'>
+          <div className='text-center p-5 lg:px-8'>
+            <div className='text-xl py-5 lg:text-3xl'>Unleash Limitless Potential</div>
+            <div className='text-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros.</div>
           </div>
-          <Fader2>
-          <div className='absolute w-full h-full top-0 left-0 rounded-full bg-white blur-3xl -z-10'></div>
-          </Fader2>
+          <div className='text-center p-5 lg:px-8'>
+            <div className='text-xl py-5 lg:text-3xl'>Secure Your Stake in the Future</div>
+            <div className='text-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros.</div>
+          </div>
         </div>
       </div>
-      <div className='h-80 -mt-20 bg-gradient-to-b to-black from-black/0'></div>
-      <div className='h-screen bg-black'></div>
+      <div className='h-screen bg-black text-white'>
+        <div className='max-w-screen-xl mx-auto grid lg:grid-cols-2'>
+          <div className='p-8 lg:px-10 lg:py-20 bg-[#111]'>
+            <div className='lg:text-6xl lg:pb-4'>Try these ready templates</div>
+            <div className=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div className='flex gap-6 items-center lg:mt-[100px]'>
+              {/* <button onClick={scrollPrev} className='bg-white/10 rounded-full flex items-center justify-center w-10 h-10'>s</button>
+              <button onClick={scrollNext} className='bg-white/10 rounded-full flex items-center justify-center w-10 h-10'>s</button> */}
+            </div>
+          </div>
+          <div className='relative'>
+            <div className='absolute z-10 top-0 left-0 h-full w-full bg-gradient-to-r from-[#111] to-black/0 from-[20%] to-[50%]'></div>
+            <div className="flex items-center justify-center h-full w-full">
+              <CarouselSize />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
 
-export default Home
+export default Home;
