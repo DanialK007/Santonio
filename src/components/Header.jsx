@@ -13,7 +13,7 @@ function Header() {
             <div className='min-w-56 text-[0.9rem] h-fit grid font-semibold border bg-black text-white/60 border-white/20 rounded-s-[22px] rounded-e-[22px] px-[0.6rem] py-[0.4rem] items-center md:justify-center'>
                 <div className="justify-between flex gap-5 ">    
                     <div className='flex gap-2 items-center justify-center'>
-                        <div className='w-6 h-6 flex items-center justify-center rounded-md bg-purple-600'>S</div>
+                        <div className='w-6 h-6 flex items-center justify-center rounded-[5px] bg-purple-600'>S</div>
                         Santonio
                     </div>
                     <a href="" className='hidden md:block bg-white/10 text-white py-[0.3rem] px-[0.7rem] rounded-s-full rounded-e-full'>Home</a>
@@ -22,8 +22,8 @@ function Header() {
                     <a href="" className='hidden md:block hover:bg-white/10 py-[0.3rem] px-[0.7rem] rounded-s-full rounded-e-full'>Blog</a>
                     <a href="" className='hidden md:block hover:bg-white/10 py-[0.3rem] px-[0.7rem] rounded-s-full rounded-e-full'>Shop</a>
                     <button className='hidden md:block bg-white py-[0.3rem] text-black px-[0.7rem] rounded-s-full rounded-e-full'>Sign up</button>
-                    <button id='menuBtn' className='block md:hidden bg-white/20 p-1 rounded-xl' onClick={toggleMenu}>
-                        <img src={img} alt="" />
+                    <button id='menuBtn' className='block md:hidden bg-white/20 p-1 rounded-[10px]' onClick={toggleMenu}>
+                        <img src={img} alt="" className='h-5'/>
                     </button>
                 </div>
                 <div id='menu' className={menuVisible ? "flex flex-col gap-2 pt-2 h-fit duration-500" : "duration-500 h-0 opacity-0 flex flex-col overflow-hidden"}>
